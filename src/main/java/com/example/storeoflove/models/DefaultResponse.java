@@ -2,12 +2,12 @@ package com.example.storeoflove.models;
 
 import com.google.gson.Gson;
 
-public class DefaultError {
+public class DefaultResponse {
 
     private int code;
     private String message;
 
-    public DefaultError(int code, String message) {
+    public DefaultResponse(int code, String message) {
         this.code = code;
         this.message = message;
     }
