@@ -22,7 +22,7 @@ public abstract class BaseServlet extends HttpServlet {
     protected boolean checkRequestParams(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         List<String> paramsNames = Collections.list(req.getParameterNames());
 
-        if(requiredParams().size() >= 0) {
+        if(requiredParams() != null || requiredParams().size() >= 0) {
             if(paramsNames.size() == 0) {
                 resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
                 resp.getWriter().print(new DefaultResponse(HttpServletResponse.SC_BAD_REQUEST, ResponseConstants.WRONG_PARAMS));
